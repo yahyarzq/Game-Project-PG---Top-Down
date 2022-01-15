@@ -25,6 +25,6 @@ public class SoundManager : MonoBehaviour
         soundFX.clip = clip;
         soundFX.volume =Random.Range(.3f,.5f);
         soundFX.pitch = Random.Range(.0f,1);
-        soundFX.Play();
+        //soundFX.Play();
     }
 }

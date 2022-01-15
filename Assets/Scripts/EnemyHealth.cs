@@ -7,6 +7,8 @@ public class EnemyHealth : MonoBehaviour
     [SerializeField]
     private int health;
 
+    public int scoreKill;
+
     public AudioClip deathClip;
     // Start is called before the first frame update
     void Start()
@@ -22,6 +24,7 @@ public class EnemyHealth : MonoBehaviour
 
     void destroyEnemy(){
         if (health < 1){
+            GameplayManager.instance.AddScore(scoreKill);
             Destroy(gameObject);
             SoundManager.instance.PlaySound(deathClip);
         }

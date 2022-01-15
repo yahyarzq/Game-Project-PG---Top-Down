@@ -255,14 +255,14 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1143341361183257418}
-  - component: {fileID: -3765703080327670199}
   - component: {fileID: -7760908488499175088}
   - component: {fileID: 8244792707332131597}
   - component: {fileID: 2093456103181170430}
   - component: {fileID: 2877093736666446782}
+  - component: {fileID: 3393449179742024133}
   m_Layer: 0
   m_Name: Alien_Blue
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -284,32 +284,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &-3765703080327670199
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8136331470609264638}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
 --- !u!50 &-7760908488499175088
 Rigidbody2D:
   serializedVersion: 4
@@ -343,7 +317,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bbb380c594b84174fa7080cfe9888cdc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1
+  speed: 3
 --- !u!212 &2093456103181170430
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -407,5 +381,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c62fe776010bc654ba73b7c67c551b63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 100
+  health: 200
+  scoreKill: 50
   deathClip: {fileID: 8300000, guid: bd8857660a16ba549b8cc522d93d9117, type: 3}
+--- !u!61 &3393449179742024133
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8136331470609264638}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -2.8071663, y: -0.6046525}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 2.4705396, y: 2.2093048}
+  m_EdgeRadius: 0
