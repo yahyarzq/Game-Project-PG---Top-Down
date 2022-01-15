@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EnemySpawner : MonoBehaviour
 {
-    public float spawnRadius = 8;
+    public float spawnRadius = 15;
     public float time =2.0f;
     public GameObject[] enemies;
     // Start is called before the first frame update

@@ -123,8 +123,8 @@ GameObject:
   - component: {fileID: 5563474200736722654}
   - component: {fileID: 9164161574876471209}
   - component: {fileID: 6947521683129535588}
-  - component: {fileID: 3911786493360826883}
   - component: {fileID: 119981018478955695}
+  - component: {fileID: 3911786493360826883}
   - component: {fileID: -1885066837279933437}
   m_Layer: 0
   m_Name: Alien_Red
@@ -163,7 +163,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -2.163779, y: -1.7796571}
@@ -200,20 +200,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &3911786493360826883
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1697424061694866257}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c62fe776010bc654ba73b7c67c551b63, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: 60
-  deathClip: {fileID: 8300000, guid: bd8857660a16ba549b8cc522d93d9117, type: 3}
 --- !u!212 &119981018478955695
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -265,6 +251,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &3911786493360826883
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1697424061694866257}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c62fe776010bc654ba73b7c67c551b63, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 60
+  deathClip: {fileID: 8300000, guid: bd8857660a16ba549b8cc522d93d9117, type: 3}
 --- !u!114 &-1885066837279933437
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -277,8 +277,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96574f0e915ffc84ba337cafc11c0cf0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
-  firePoint: {fileID: 1950916918082824540}
+  speed: 3
+  firePoint1: {fileID: 1950916918082824540}
+  firePoint2: {fileID: 965039972424580193}
   bulletPrefab: {fileID: 6315661827674587424, guid: 8936f649bc161b042a282d7a3c1cf118, type: 3}
   bulletForce: 20
 --- !u!1 &2189266695361669040

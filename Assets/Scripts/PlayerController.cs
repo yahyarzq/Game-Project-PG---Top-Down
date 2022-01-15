@@ -72,6 +72,7 @@ public class PlayerController : MonoBehaviour
     }
     // Move Camera Position
     private void MouseAim()
+
     {
         Vector2 lookDir = mousePos - rb.position;
         float angle = Mathf.Atan2(lookDir.y, lookDir.x) * Mathf.Rad2Deg - 90f;
@@ -88,7 +89,7 @@ public class PlayerController : MonoBehaviour
     //Player Take Dame
     private void PlayerTakeDamage(Collider2D target)
     {
-        if(target.tag == "Enemy"){
+        if((target.tag == "Enemy") || (target.tag == "Enemy_Projectile")){
             if (hit){
             
             currentHealth = currentHealth -10 ;
@@ -98,6 +99,9 @@ public class PlayerController : MonoBehaviour
             }
         }
         }
+        
+       
+    
     }
     IEnumerator Death(){
         yield return new WaitForSeconds(2);

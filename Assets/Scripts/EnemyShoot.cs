@@ -6,7 +6,8 @@ public class EnemyShoot : MonoBehaviour
 {
    
     public float speed;
-    public Transform firePoint;
+    public Transform firePoint1;
+    public Transform firePoint2;
     private Transform playerPos;
     private Rigidbody2D rb;
     public GameObject bulletPrefab;
@@ -60,8 +61,15 @@ public class EnemyShoot : MonoBehaviour
     }
 
     IEnumerator Shoot(){
-            EnemyWeapon();
-            yield return new WaitForSeconds(1f);
+            EnemyWeapon(firePoint1);
+            EnemyWeapon(firePoint2);
+            yield return new WaitForSeconds(0.3f);
+            EnemyWeapon(firePoint1);
+            EnemyWeapon(firePoint2);
+            yield return new WaitForSeconds(0.3f);
+            EnemyWeapon(firePoint1);
+            EnemyWeapon(firePoint2);
+            yield return new WaitForSeconds(0.3f);
         if (isinPlayerRange)
         {
             
@@ -71,10 +79,11 @@ public class EnemyShoot : MonoBehaviour
         
     }
 
-    void EnemyWeapon(){
-        GameObject bullet =  Instantiate(bulletPrefab,firePoint.position, firePoint.rotation);
+    void EnemyWeapon(Transform firepoint){
+        GameObject bullet =  Instantiate(bulletPrefab,firepoint.position, firepoint.rotation);
         Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
-        rb.AddForce(firePoint.up * bulletForce,ForceMode2D.Impulse);
+        rb.AddForce(firepoint.up * bulletForce,ForceMode2D.Impulse);
+        
     }
 
     
