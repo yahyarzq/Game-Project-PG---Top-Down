@@ -14,12 +14,16 @@ public class PlayerController : MonoBehaviour
     public HealthBar healthBar;
 
     public Weapon weapon;
+    public Weapon weaponSecondary;
     public int maxHealth = 100;
     public int currentHealth = 10;
     public float moveSpeed = 5;
     
     public Transform firePoint;
+
+    public Transform firePointSecondary;
     public float nextTimeOfFire = 0;
+    public float nextTimeOfFireSecondary = 0;
 
     private bool hit = true;
     // Start is called before the first frame update
@@ -113,18 +117,26 @@ public class PlayerController : MonoBehaviour
         //if (Input.GetButtonDown("Fire1")){
         //    weapon.Shoot();
         //}
-        weapon.setFirePoint(firePoint);
+        //weapon.setFirePoint(firePoint);
 
         if (Input.GetMouseButton(0)){
             if (Time.time >= nextTimeOfFire){
-                weapon.Shoot();
+                weapon.Shoot(firePoint);
                 nextTimeOfFire = Time.time +1/weapon.fireRate;
+            }
+            
+        }
+        if (Input.GetMouseButton(1)){
+            if (Time.time >= nextTimeOfFireSecondary){
+                weaponSecondary.Shoot(firePointSecondary);
+                nextTimeOfFireSecondary = Time.time +1/weaponSecondary.fireRate;
             }
             
         }
     }
     void ChangeWeaponSprite(){
         transform.GetChild(0).GetChild(1).GetComponent<SpriteRenderer>().sprite = weapon.currentWeapon;
+        transform.GetChild(0).GetChild(5).GetComponent<SpriteRenderer>().sprite = weaponSecondary.currentWeapon;
     }
 
 }

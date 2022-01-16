@@ -6,9 +6,10 @@ using UnityEngine;
 public class Weapon : ScriptableObject
 {
     public Sprite currentWeapon;
+
     public GameObject bulletPrefab;
     private Animator anim;
-    private Transform firePoint;
+    //private Transform firePoint;
     public float fireRate = 1;
     public int damage = 20;
 
@@ -27,14 +28,15 @@ public class Weapon : ScriptableObject
         
     }
 
-    public void setFirePoint(Transform firepoint){
-        firePoint = firepoint;
-    }
-    public void Shoot(){
+    // public void setFirePoint(Transform firepoint){
+    //     firePoint = firepoint;
+    // }
+    public void Shoot(Transform firePoint){
         GameObject bullet =  Instantiate(bulletPrefab,firePoint.position, firePoint.rotation);
         Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
         rb.AddForce(firePoint.up * bulletForce,ForceMode2D.Impulse);
         SoundManager.instance.PlaySound(shootClips[Random.Range(0,shootClips.Length)]);
     }
+    
 
 }

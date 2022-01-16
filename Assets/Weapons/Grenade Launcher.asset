@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentWeapon: {fileID: -7705965997169741623, guid: 8438129fdd376d541917cc8b4c47bf2b, type: 3}
   bulletPrefab: {fileID: 6025544503281227598, guid: cfbc6a55c72dbf94bb2e161aa2f2f2c3, type: 3}
-  fireRate: 3
-  damage: 20
+  fireRate: 0.5
+  damage: 50
   bulletForce: 15
   shootClips:
   - {fileID: 8300000, guid: 26e19616f6ba9f6469e9d3d6c38b23fe, type: 3}

@@ -9,6 +9,8 @@ public class EnemyHealth : MonoBehaviour
 
     public int scoreKill;
 
+    private bool explosion;
+
     public AudioClip deathClip;
     // Start is called before the first frame update
     void Start()
@@ -34,6 +36,12 @@ public class EnemyHealth : MonoBehaviour
         {
             health -= GameObject.Find("Player").GetComponent<PlayerController>().weapon.damage;
             Destroy(target.gameObject);
+        }
+    }
+    public void TakeDamage(){
+        if(!explosion){
+            explosion =true;
+            health -= GameObject.Find("Player").GetComponent<PlayerController>().weaponSecondary.damage;
         }
     }
 }

@@ -25066,11 +25066,14 @@ MonoBehaviour:
   cam: {fileID: 519420031}
   healthBar: {fileID: 187901136}
   weapon: {fileID: 11400000, guid: 6f5d64dcfbe90a44092f9248fe9d20de, type: 2}
+  weaponSecondary: {fileID: 11400000, guid: af0d02ae3e8268c499846653e96f4bf2, type: 2}
   maxHealth: 100
   currentHealth: 10
   moveSpeed: 12
   firePoint: {fileID: 733814945}
+  firePointSecondary: {fileID: 1358094625}
   nextTimeOfFire: 0
+  nextTimeOfFireSecondary: 0
 --- !u!61 &1665223545
 BoxCollider2D:
   m_ObjectHideFlags: 0

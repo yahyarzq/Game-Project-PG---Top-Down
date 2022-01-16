@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: -8402039475455601942}
   m_Layer: 0
   m_Name: Grenade Ammo
-  m_TagString: Projectile
+  m_TagString: Projectile_Secondary
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -72,7 +72,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -522286591
-  m_SortingLayer: 1
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: -8744202859135705330, guid: 8438129fdd376d541917cc8b4c47bf2b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -151,5 +151,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54235fd16d466d247a573fa5f8bf6f60, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hitEffect: {fileID: 7438521947934052521, guid: ed3a070097ab01e4ba3023fc498014a4, type: 3}
+  hitEffect: {fileID: 139366, guid: a34761e1a3a0ab546b635b25165080b8, type: 3}
   hitClip: {fileID: 8300000, guid: 87e2452fe2c754248926c9a9ab93a467, type: 3}
