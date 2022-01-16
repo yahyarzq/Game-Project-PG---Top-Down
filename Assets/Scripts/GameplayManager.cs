@@ -13,7 +13,7 @@ public class GameplayManager : MonoBehaviour
     public GameObject[] enemies;
 
     public Level[] level;
-    public Text currentScoreText,maxScoreText,roundCount;
+    public TextMeshProUGUI currentScoreText,maxScoreText,roundCount;
 
     public TextMeshProUGUI roundComplete;
     // Start is called before the first frame update
