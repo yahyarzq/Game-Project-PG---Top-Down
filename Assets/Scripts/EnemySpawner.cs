@@ -24,7 +24,7 @@ public class EnemySpawner : MonoBehaviour
         spawnPos += Random.insideUnitCircle.normalized * spawnRadius;
 
         if(GameplayManager.instance.spawn){
-            if(Random.value <+ 0.2 && GameplayManager.instance.levelNumber>= 2)
+            if(Random.value <= 0.2 && GameplayManager.instance.levelNumber>= 2)
                 Instantiate(enemies[2],spawnPos,Quaternion.identity);
             else
                 Instantiate(enemies[Random.Range(0,enemies.Length -1 )],spawnPos,Quaternion.identity);

@@ -8957,6 +8957,9 @@ MonoBehaviour:
   - scoreMax: 100
   - scoreMax: 200
   - scoreMax: 300
+  - scoreMax: 400
+  - scoreMax: 500
+  - scoreMax: 600
   currentScoreText: {fileID: 500987024}
   maxScoreText: {fileID: 1445773506}
   roundCount: {fileID: 436060245}
@@ -25067,7 +25070,7 @@ MonoBehaviour:
   healthBar: {fileID: 187901136}
   weapon: {fileID: 11400000, guid: 6f5d64dcfbe90a44092f9248fe9d20de, type: 2}
   weaponSecondary: {fileID: 11400000, guid: af0d02ae3e8268c499846653e96f4bf2, type: 2}
-  maxHealth: 100
+  maxHealth: 200
   currentHealth: 10
   moveSpeed: 12
   firePoint: {fileID: 733814945}
@@ -26216,7 +26219,7 @@ MonoBehaviour:
   m_UiScaleMode: 0
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 1920, y: 1080}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
