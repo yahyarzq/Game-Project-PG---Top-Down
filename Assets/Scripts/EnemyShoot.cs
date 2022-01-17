@@ -14,6 +14,7 @@ public class EnemyShoot : MonoBehaviour
 
     public float bulletForce = 20f;
     private bool isinPlayerRange = false;
+    public AudioClip[] shootClips ;
     //private Vector2 movement;
     // Start is called before the first frame update
     void Start()
@@ -83,6 +84,7 @@ public class EnemyShoot : MonoBehaviour
         GameObject bullet =  Instantiate(bulletPrefab,firepoint.position, firepoint.rotation);
         Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
         rb.AddForce(firepoint.up * bulletForce,ForceMode2D.Impulse);
+        SoundManager.instance.PlaySound(shootClips[Random.Range(0,shootClips.Length)]);
         
     }
 

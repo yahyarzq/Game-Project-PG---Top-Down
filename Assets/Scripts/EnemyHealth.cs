@@ -28,7 +28,7 @@ public class EnemyHealth : MonoBehaviour
         if (health < 1){
             GameplayManager.instance.AddScore(scoreKill);
             Destroy(gameObject);
-            SoundManager.instance.PlaySound(deathClip);
+            //SoundManager.instance.PlaySound(deathClip);
         }
     }
     private void OnTriggerEnter2D(Collider2D target) {

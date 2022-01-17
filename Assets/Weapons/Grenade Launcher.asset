@@ -18,4 +18,4 @@ MonoBehaviour:
   damage: 50
   bulletForce: 15
   shootClips:
-  - {fileID: 8300000, guid: 26e19616f6ba9f6469e9d3d6c38b23fe, type: 3}
+  - {fileID: 8300000, guid: bb2e2714f962491428dcb0b38598b251, type: 3}

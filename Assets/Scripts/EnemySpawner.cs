@@ -26,8 +26,10 @@ public class EnemySpawner : MonoBehaviour
         if(GameplayManager.instance.spawn){
             if(Random.value <= 0.2 && GameplayManager.instance.levelNumber>= 2)
                 Instantiate(enemies[2],spawnPos,Quaternion.identity);
+            if(Random.value <= 0.4 && GameplayManager.instance.levelNumber>= 1)
+                Instantiate(enemies[0],spawnPos,Quaternion.identity);
             else
-                Instantiate(enemies[Random.Range(0,enemies.Length -1 )],spawnPos,Quaternion.identity);
+                Instantiate(enemies[1],spawnPos,Quaternion.identity);
         }
         yield return new WaitForSeconds(time);
         StartCoroutine(SpawnAnEnemies());

@@ -152,4 +152,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitEffect: {fileID: 7438521947934052521, guid: 8da29e7feb50111499a8e9fcaf40355d, type: 3}
-  hitClip: {fileID: 8300000, guid: 87e2452fe2c754248926c9a9ab93a467, type: 3}
+  hitClip: {fileID: 8300000, guid: dc9bc91cccb311a42a295f6658714f02, type: 3}
